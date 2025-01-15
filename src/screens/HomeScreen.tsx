@@ -1,4 +1,4 @@
-import { View, Text, FlatList, Image, TouchableOpacity, Platform, Linking, StyleSheet } from 'react-native'
+import { View, Text, FlatList, Image, TouchableOpacity, Linking, StyleSheet } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 

@@ -3,12 +3,13 @@ import React from 'react'
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { DrawerActionType, NavigationContainer, useNavigation } from '@react-navigation/native';
 import HomeScreen from './screens/HomeScreen';
-import AboutScreen from './screens/AboutScreen';
-import ContactUsScreen from './screens/ContactUsScreen';
+import AboutScreen from './screens/DrawerScreens/AboutScreen';
+import ContactUsScreen from './screens/DrawerScreens/ContactUsScreen';
 import { createStackNavigator } from '@react-navigation/stack';
 import WebViewScreen from './screens/WebViewScreen';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 import SplashScreen from './screens/SplashScreen';
+import PrivacyPolicyScreen from './screens/DrawerScreens/PrivacyPolicyScreen';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -27,7 +28,8 @@ const DrawerNavigator = () => {
         },
       }} />
       <Drawer.Screen name="About" component={AboutScreen} />
-      <Drawer.Screen name="Contact Us" component={ContactUsScreen} />
+      <Drawer.Screen name="Privacy Policy" component={PrivacyPolicyScreen} />
+      <Drawer.Screen name="ContactUs" component={ContactUsScreen} />
     </Drawer.Navigator>)
 }
 
