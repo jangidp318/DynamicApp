@@ -10,6 +10,8 @@ import WebViewScreen from './screens/WebViewScreen';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 import SplashScreen from './screens/SplashScreen';
 import PrivacyPolicyScreen from './screens/DrawerScreens/PrivacyPolicyScreen';
+import QuizScreen from './screens/QuizScreen';
+import QuizDetailsScreen from './screens/QuizDetailsScreen';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -40,6 +42,8 @@ function App() {
         <Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
         <Stack.Screen name="MainDrawer" component={DrawerNavigator} options={{ headerShown: false }} />
         <Stack.Screen name="WebViewScreen" component={WebViewScreen} options={{ headerTitle: 'Website' }} />
+        <Stack.Screen name="QuizScreen" component={QuizScreen} options={{ headerTitle: 'Quiz' }} />
+        <Stack.Screen name="QuizDetailsScreen" component={QuizDetailsScreen} options={{ headerTitle: 'Quiz' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

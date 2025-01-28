@@ -56,7 +56,7 @@ const menuItems = [
     {
         title: 'Quiz',
         icon: require('../assets/icons/Quiz1.png'),
-        url: 'https://www.teachersofbihar.org/',
+        screen: 'QuizScreen',
     },
     {
         title: 'Survey',
@@ -76,7 +76,8 @@ const HomeScreen = () => {
                 renderItem={({ item }) => {
                     return (
                         <TouchableOpacity style={{ flex: 1, margin: 10, alignItems: 'center' }} onPress={() => {
-                            navigation.navigate('WebViewScreen', { url: item.url })
+                            { item?.url && navigation.navigate('WebViewScreen', { url: item.url }) }
+                            { item.screen && navigation.navigate(item.screen) }
                         }}>
                             <View style={styles.imageContainer}>
                                 <Image source={item.icon} style={{ width: 150, height: 150, borderRadius: 75, borderWidth: 5, borderColor: 'white', margin: 5 }} />
@@ -108,8 +109,6 @@ const styles = StyleSheet.create({
         width: 150,
         height: 150,
         borderRadius: 75,
-        backgroundColor: 'black',
-        shadowColor: 'black',
         elevation: 8,
     }
 })
